@@ -1,0 +1,229 @@
+.app-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+  width: 100%;
+}
+
+.header {
+  margin-bottom: 2rem;
+}
+
+.header h1 {
+  font-size: 3.5rem;
+  font-weight: 800;
+  background: linear-gradient(to right, #6366f1, #a855f7, #ec4899);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin: 0;
+  filter: drop-shadow(0 0 10px rgba(99, 102, 241, 0.3));
+}
+
+.header p {
+  color: #94a3b8;
+  font-size: 1.2rem;
+  margin-top: 0.5rem;
+}
+
+.main-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+  width: 100%;
+  max-width: 1100px;
+}
+
+@media (max-width: 900px) {
+  .main-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.card {
+  background: rgba(30, 30, 45, 0.4);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 24px;
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  overflow: hidden;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+  border-color: rgba(99, 102, 241, 0.2);
+}
+
+.card h2 {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 1.5rem;
+  margin-bottom: 1.5rem;
+  color: #e2e8f0;
+}
+
+.view-container {
+  width: 100%;
+  aspect-ratio: 4/3;
+  background: #000;
+  border-radius: 16px;
+  position: relative;
+  overflow: hidden;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.webcam-view {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.canvas-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.upload-area {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  border: 2px dashed rgba(255, 255, 255, 0.1);
+  border-radius: 16px;
+  transition: all 0.3s ease;
+}
+
+.upload-area:hover {
+  background: rgba(255, 255, 255, 0.05);
+  border-color: #6366f1;
+}
+
+.preview-image {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.btn {
+  padding: 0.8rem 1.5rem;
+  border-radius: 12px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  border: none;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-top: 1rem;
+}
+
+.btn-primary {
+  background: linear-gradient(135deg, #6366f1 0%, #4f46e5 100%);
+  color: white;
+}
+
+.btn-primary:hover {
+  filter: brightness(1.2);
+  transform: scale(1.02);
+}
+
+.btn-outline {
+  background: transparent;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  color: white;
+}
+
+.btn-outline:hover {
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.controls {
+  display: flex;
+  gap: 1rem;
+}
+
+.results-panel {
+  width: 100%;
+  margin-top: 1rem;
+  text-align: left;
+}
+
+.emotion-badge {
+  display: inline-block;
+  padding: 0.4rem 1rem;
+  border-radius: 999px;
+  font-weight: 700;
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin-right: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.emotion-Happy {
+  background: #22c55e;
+  color: white;
+}
+
+.emotion-Sad {
+  background: #3b82f6;
+  color: white;
+}
+
+.emotion-Angry {
+  background: #ef4444;
+  color: white;
+}
+
+.emotion-Surprise {
+  background: #eab308;
+  color: black;
+}
+
+.emotion-Neutral {
+  background: #94a3b8;
+  color: white;
+}
+
+.emotion-Fear {
+  background: #a855f7;
+  color: white;
+}
+
+.emotion-Disgust {
+  background: #15803d;
+  color: white;
+}
+
+.status-indicator {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.8rem;
+  margin-top: 1rem;
+  color: #94a3b8;
+}
+
+.status-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #ef4444;
+}
+
+.status-dot.active {
+  background: #22c55e;
+  box-shadow: 0 0 8px #22c55e;
+}

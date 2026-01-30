@@ -1,0 +1,20 @@
+# Node.js
+node_modules/
+dist/
+.env*
+!.env.production
+
+# Python
+__pycache__/
+*.pyc
+venv/
+.venv/
+env/
+
+# Data/Models (Large files)
+# If the user wants to push the model, we can leave it out of ignore, 
+# but GitHub has a 100MB limit. 4MB for .h5 is fine.
+
+# OS
+.DS_Store
+Thumbs.db
