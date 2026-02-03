@@ -40,7 +40,7 @@ def predict():
     img = cv2.imdecode(nparr, cv2.IMREAD_COLOR)
     
     gray = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
-    faces = face_cascade.detectMultiScale(gray, 1.3, 5)
+    faces = face_cascade.detectMultiScale(gray, 1.1, 5)
     
     results = []
     for (x, y, w, h) in faces:
@@ -72,7 +72,7 @@ def predict_frame():
     img = cv2.imdecode(nparr, cv2.IMREAD_COLOR)
     
     gray = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
-    faces = face_cascade.detectMultiScale(gray, 1.3, 5)
+    faces = face_cascade.detectMultiScale(gray, 1.1, 5)
     
     results = []
     for (x, y, w, h) in faces:
